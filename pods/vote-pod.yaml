@@ -1,5 +1,12 @@
 apiVersion: v1
-kind: 
-metadata:
+kind: Pod
+metadata: 
+  name: vote
+  labels:
+    app: python
+    version: v1
+    role: vote
 spec:
-
+  containers:
+    - name: app
+      image: reachabhim/oc-vote:v1
